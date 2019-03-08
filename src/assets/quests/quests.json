@@ -1,0 +1,22 @@
+{
+    "quests": [
+        {
+            "name": "Quête 1", 
+            "description": "La première quête", 
+            "rank": 1, 
+            "duration": 1
+        },
+        {
+            "name": "Quête 2", 
+            "description": "La seconde quête", 
+            "rank": 1, 
+            "duration": 1
+        },
+        {
+            "name": "Quête 3", 
+            "description": "La troisième quête", 
+            "rank": 1, 
+            "duration": 1
+        }
+    ]
+}

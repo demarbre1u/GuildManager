@@ -1,5 +1,6 @@
 export interface Quest {
     name: string,
     description: string, 
-    rank: number
+    rank: number, 
+    duration: number
 }

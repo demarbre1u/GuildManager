@@ -15,7 +15,7 @@ export class CreateComponent implements OnInit
 
   addAvailableQuest(name, description, rank) 
   {
-    this.store.dispatch(new QuestActions.AddAvailableQuest({name: name, description: description, rank: rank}))
+    this.store.dispatch(new QuestActions.AddAvailableQuest({name: name, description: description, rank: rank, duration: 1}))
   }
 
   ngOnInit() {}

@@ -1,0 +1,11 @@
+<h1>Liste des quêtes disponibles : </h1>
+<ul>
+  <li *ngFor="let quest of availableQuests | async">
+    <h3>{{ quest.name }}</h3>
+    <p>{{ quest.description }}</p>
+    <p>Rang {{ quest.rank }}</p>
+    <p>Durée : {{ quest.duration }} jour</p>
+  </li>
+</ul>
+
+<button (click)="nextDay()">Fin du jour</button>

@@ -54,6 +54,6 @@ export class NewQuestsComponent implements OnInit {
 
   nextStep() 
   {
-    this.router.navigate([''])
+    this.router.navigate(['new-adventurers'])
   }
 }

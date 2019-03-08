@@ -9,4 +9,13 @@
   </li>
 </ul>
 
+<h1>Liste des aventuriers disponibles : </h1>
+<ul>
+  <li *ngFor="let adv of availableAdventurers | async; let i = index">
+    <h3>{{ adv.name }}</h3>
+    <p>Rang {{ adv.rank }}</p>
+    <button (click)="removeAvailableAdventurer(i)">Renvoyer</button>
+  </li>
+</ul>
+
 <button (click)="nextDay()">Fin du jour</button>

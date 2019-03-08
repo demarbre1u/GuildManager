@@ -36,9 +36,4 @@ export class MainComponent implements OnInit {
   {
     this.store.dispatch(new AdventurerActions.RemoveAvailableAdventurer(index))    
   }
-
-  nextDay()
-  {
-    this.router.navigate(['new-quests'])
-  }
 }

@@ -1,7 +1,7 @@
 <div id="router-wrapper">
   <h1>Nouvelles quêtes : </h1>
   <ul>
-    <li *ngFor="let quest of quests; let i = index">
+    <li *ngFor="let quest of dailyQuests | async; let i = index">
       <h3>{{ quest.name }}</h3>
       <p>{{ quest.description }}</p>
       <p>Rang {{ quest.rank }}</p>
@@ -12,10 +12,10 @@
 
   <h1>Nouveaux aventuriers : </h1>
   <ul>
-    <li *ngFor="let adv of adventurers; let i = index">
+    <li *ngFor="let adv of dailyAdventurers | async; let i = index">
       <h3>{{ adv.name }}</h3>
       <p>Rang {{ adv.rank }}</p>
-      <button (click)="addAvailableAdventurer(adv, i)">Engager</button>
+      <button (click)="addAdventurer(adv, i)">Engager</button>
     </li>
   </ul>
 </div>

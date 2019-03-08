@@ -10,13 +10,12 @@ import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
 import { MainComponent } from './main/main.component';
 import { Routes, RouterModule } from '@angular/router';
-import { NewQuestsComponent } from './new-quests/new-quests.component';
+import { DailyComponent } from './daily/daily.component';
 import { NewAdventurersComponent } from './new-adventurers/new-adventurers.component';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'new-quests', component: NewQuestsComponent },
-  { path: 'new-adventurers', component: NewAdventurersComponent },
+  { path: 'daily', component: DailyComponent },
 ];
 
 @NgModule({
@@ -25,7 +24,7 @@ const appRoutes: Routes = [
     ReadComponent,
     CreateComponent,
     MainComponent,
-    NewQuestsComponent,
+    DailyComponent,
     NewAdventurersComponent
   ],
   imports: [

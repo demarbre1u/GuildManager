@@ -1,1 +1,18 @@
-<router-outlet></router-outlet>
+<div id="wrapper">
+    <nav>
+        <div class="title">Guild Manager</div>
+
+        <div id="menu">
+            <button id="next-day-btn">Jour suivant</button>
+
+            <div id="sub-menu">
+                <div routerLink="/">Gérer</div>
+                <div routerLink="/daily">Nouveaux</div>
+                <div>Améliorations</div>
+                <div>Sauvegarder</div>
+            </div>
+        </div>
+    </nav>
+    
+    <router-outlet></router-outlet>
+</div>

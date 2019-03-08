@@ -1,21 +1,21 @@
-<h1>Liste des quêtes disponibles : </h1>
-<ul>
-  <li *ngFor="let quest of availableQuests | async; let i = index">
-    <h3>{{ quest.name }}</h3>
-    <p>{{ quest.description }}</p>
-    <p>Rang {{ quest.rank }}</p>
-    <p>Durée : {{ quest.duration }} jour</p>
-    <button (click)="removeAvailableQuest(i)">Supprimer</button>
-  </li>
-</ul>
+<div id="router-wrapper">
+  <h1>Liste des quêtes disponibles : </h1>
+  <ul>
+    <li *ngFor="let quest of availableQuests | async; let i = index">
+      <h3>{{ quest.name }}</h3>
+      <p>{{ quest.description }}</p>
+      <p>Rang {{ quest.rank }}</p>
+      <p>Durée : {{ quest.duration }} jour</p>
+      <button (click)="removeAvailableQuest(i)">Supprimer</button>
+    </li>
+  </ul>
 
-<h1>Liste des aventuriers disponibles : </h1>
-<ul>
-  <li *ngFor="let adv of availableAdventurers | async; let i = index">
-    <h3>{{ adv.name }}</h3>
-    <p>Rang {{ adv.rank }}</p>
-    <button (click)="removeAvailableAdventurer(i)">Renvoyer</button>
-  </li>
-</ul>
-
-<button (click)="nextDay()">Fin du jour</button>
+  <h1>Liste des aventuriers disponibles : </h1>
+  <ul>
+    <li *ngFor="let adv of availableAdventurers | async; let i = index">
+      <h3>{{ adv.name }}</h3>
+      <p>Rang {{ adv.rank }}</p>
+      <button (click)="removeAvailableAdventurer(i)">Renvoyer</button>
+    </li>
+  </ul>
+</div>

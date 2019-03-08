@@ -11,6 +11,9 @@ export function questReducer(state: Quest[] = initialState, action: QuestActions
         case QuestActions.ADD_AVAILABLE_QUEST:
             state.push(action.payload)
             return state;
+        case QuestActions.REMOVE_AVAILABLE_QUEST:
+            state.splice(action.payload, 1)
+            return state;
         default:
             return state;
     }

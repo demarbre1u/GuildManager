@@ -16,7 +16,7 @@ export class RemoveAvailableQuest implements Action
 {
     readonly type = REMOVE_AVAILABLE_QUEST
 
-    constructor(public payload: Quest) {}
+    constructor(public payload: number) {}
 }
 
 export type Actions = AddAvailableQuest | RemoveAvailableQuest

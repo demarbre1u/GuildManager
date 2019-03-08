@@ -1,10 +1,11 @@
 <h1>Liste des quêtes disponibles : </h1>
 <ul>
-  <li *ngFor="let quest of availableQuests | async">
+  <li *ngFor="let quest of availableQuests | async; let i = index">
     <h3>{{ quest.name }}</h3>
     <p>{{ quest.description }}</p>
     <p>Rang {{ quest.rank }}</p>
     <p>Durée : {{ quest.duration }} jour</p>
+    <button (click)="removeAvailableQuest(i)">Supprimer</button>
   </li>
 </ul>
 

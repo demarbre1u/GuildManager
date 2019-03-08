@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Quest } from '../models/quest.model';
-import { Store } from '@ngrx/store';
+import * as QuestActions from './../actions/quest.actions';
+import { Store, ActionsSubject } from '@ngrx/store';
 import { AppState } from '../app.state';
 import { Router } from '@angular/router';
 
@@ -20,6 +21,11 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  removeAvailableQuest(index: number)
+  {
+    this.store.dispatch(new QuestActions.RemoveAvailableQuest(index))    
   }
 
   nextDay()

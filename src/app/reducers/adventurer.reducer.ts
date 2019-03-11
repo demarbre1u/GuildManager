@@ -3,6 +3,7 @@ import * as AdventurerActions from '../actions/adventurer.actions'
 
 const initialAvailableAdventurers: Adventurer[] = new Array<Adventurer>()
 
+// Reduces the available adventurer list
 export function availableAdventurerReducer(state: Adventurer[] = initialAvailableAdventurers, action: AdventurerActions.Actions) 
 {
     switch(action.type) 
@@ -20,6 +21,7 @@ export function availableAdventurerReducer(state: Adventurer[] = initialAvailabl
 
 const initialDailyAdventurers: Adventurer[] = new Array<Adventurer>()
 
+// Reduces the daily adventurer list
 export function dailyAdventurerReducer(state: Adventurer[] = initialDailyAdventurers, action: AdventurerActions.Actions) 
 {
     switch(action.type) 

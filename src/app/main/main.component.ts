@@ -15,7 +15,10 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
+  // Available quests from the store
   availableQuests: Observable<Quest[]>;
+
+  // Available adventurers from the store
   availableAdventurers: Observable<Adventurer[]>;
 
   constructor(private store: Store<AppState>, private router: Router) 
@@ -27,11 +30,13 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Remove a quest from the available quest list
   removeAvailableQuest(index: number)
   {
     this.store.dispatch(new QuestActions.RemoveAvailableQuest(index))  
   }
 
+  // Remove an adventurer from the available adventurer list
   removeAvailableAdventurer(index: number)
   {
     this.store.dispatch(new AdventurerActions.RemoveAvailableAdventurer(index))    

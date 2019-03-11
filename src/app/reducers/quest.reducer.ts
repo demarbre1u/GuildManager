@@ -3,6 +3,7 @@ import * as QuestActions from './../actions/quest.actions'
 
 const initialAvailableQuest: Quest[] = new Array<Quest>()
 
+// Reduces the available quest list
 export function availableQuestReducer(state: Quest[] = initialAvailableQuest, action: QuestActions.Actions) 
 {
     switch(action.type) 
@@ -20,6 +21,7 @@ export function availableQuestReducer(state: Quest[] = initialAvailableQuest, ac
 
 const initialDailyQuest: Quest[] = new Array<Quest>()
 
+// Reduces the daily quest list
 export function dailyQuestReducer(state: Quest[] = initialDailyQuest, action: QuestActions.Actions) 
 {
     switch(action.type) 

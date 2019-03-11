@@ -16,7 +16,10 @@ import * as AdventurerActions from './../actions/adventurer.actions';
 })
 export class DailyComponent implements OnInit {
 
+  // Daily quests from the store
   dailyQuests: Observable<Quest[]>;
+
+  // Daily adventurers from the store
   dailyAdventurers: Observable<Adventurer[]>;
 
   constructor(private store: Store<AppState>, private router: Router) 
@@ -27,12 +30,14 @@ export class DailyComponent implements OnInit {
 
   ngOnInit() {}
 
+  // Adds an adventurer from the daily list to the available list 
   addAdventurer(adv: Adventurer, index: number)
   {
     this.store.dispatch(new AdventurerActions.AddAvailableAdventurer({...adv}))    
     this.store.dispatch(new AdventurerActions.RemoveDailyAdventurer(index))
   }
 
+  // Adds a quest from the daily list to the available list 
   addQuest(quest: Quest, index: number)
   {
     this.store.dispatch(new QuestActions.AddAvailableQuest({...quest}))    

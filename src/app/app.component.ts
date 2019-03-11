@@ -28,12 +28,14 @@ export class AppComponent {
     this.pickNewQuests()
   }
 
+  // Pick new daily quests and adventurers for each new day
   nextDay() 
   {
     this.pickNewAdventurers()
     this.pickNewQuests()
   }
 
+  // Pick randomly new adventurers and add them the the daily adventurers list
   pickNewAdventurers()
   {
     this.store.dispatch(new AdventurerActions.EmptyDailyAdventurer())
@@ -55,6 +57,7 @@ export class AppComponent {
     }
   }
 
+  // Pick randomly new quests and add them the the daily quests list
   pickNewQuests() 
   {
     this.store.dispatch(new QuestActions.EmptyDailyQuest())
